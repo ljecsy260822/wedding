@@ -349,26 +349,24 @@
     const g = CONFIG.groom;
     const b = CONFIG.bride;
 
-    function parentLine(person) {
+    function parentRow(person, relation) {
       const md = person.motherDeceased ? ' deceased' : '';
+      // showFather: false 이면 어머니만 표시 (아버지 표시 여부와 점 제거는 별개 제어)
+      let parentNames;
       if (person.showFather === false) {
-        // 어머니 이름만 표시: "김나경의 아들/딸 이름"
-        return `<span class="${md}">${person.mother}</span>`;
+        parentNames = `<span class="${md}">${person.mother}</span>`;
+      } else {
+        const fd = person.fatherDeceased ? ' deceased' : '';
+        parentNames = `<span class="${fd}">${person.father}</span> · <span class="${md}">${person.mother}</span>`;
       }
-      const fd = person.fatherDeceased ? ' deceased' : '';
-      return `<span class="${fd}">${person.father}</span> · <span class="${md}">${person.mother}</span>`;
+      return `
+        <div class="parent-row">
+          ${parentNames}
+          의 ${relation} <span class="child-name">${person.name}</span>
+        </div>`;
     }
 
-    const parentsHTML = `
-      <div class="parent-row">
-        ${parentLine(g)}
-        의 아들 <span class="child-name">${g.name}</span>
-      </div>
-      <div class="parent-row">
-        ${parentLine(b)}
-        의 딸 <span class="child-name">${b.name}</span>
-      </div>
-    `;
+    const parentsHTML = parentRow(g, '아들') + parentRow(b, '딸');
 
     $('#greetingParents').innerHTML = parentsHTML;
   }
