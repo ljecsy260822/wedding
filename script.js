@@ -362,12 +362,10 @@
     const parentsHTML = `
       <div class="parent-row">
         ${parentLine(g)}
-        <span class="parent-dot">●</span>
         의 아들 <span class="child-name">${g.name}</span>
       </div>
       <div class="parent-row">
         ${parentLine(b)}
-        <span class="parent-dot">●</span>
         의 딸 <span class="child-name">${b.name}</span>
       </div>
     `;
