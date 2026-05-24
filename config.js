@@ -61,10 +61,10 @@ const CONFIG = {
     content: "서로 다른 길을 걷던 두 사람이\n하나의 길을 함께 걷게 되었습니다.\n\n여러분을 소중한 자리에 초대합니다."
   },
 
-  // ── 강아지 화동 ──
+  // ── 안내사항 ──
   // 이미지는 images/dog/1.jpg, images/dog/2.jpg 에 넣어주세요
   dogRingBearer: {
-    title: "강아지 화동",
+    title: "안내사항",
     content: "우리의 특별한 날을 함께할\n소중한 친구를 소개합니다.\n\n작은 발걸음으로 꽃길을 걸어줄\n우리의 네 발 달린 가족입니다."
   },
 
@@ -75,12 +75,12 @@ const CONFIG = {
   accounts: {
     groom: [
       { role: "신랑", name: "최성용", bank: "카카오뱅크", number: "3333-04-2633875" },
-      { role: "어머니", name: "김부인", bank: "우리은행", number: "000-000-000000" }
+      { role: "어머니", name: "김나경", bank: "우리은행", number: "000-000-000000" }
     ],
     bride: [
-      { role: "신부", name: "김영희", bank: "하나은행", number: "000-000-000000" },
-      { role: "아버지", name: "김사장", bank: "기업은행", number: "000-000-000000" },
-      { role: "어머니", name: "이부인", bank: "농협은행", number: "000-000-000000" }
+      { role: "신부", name: "이정은", bank: "하나은행", number: "000-000-000000" },
+      { role: "아버지", name: "이권", bank: "기업은행", number: "000-000-000000" },
+      { role: "어머니", name: "김순희", bank: "농협은행", number: "000-000-000000" }
     ]
   },
 
