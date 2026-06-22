@@ -39,8 +39,8 @@ const CONFIG = {
   wedding: {
     date: "2026-08-22",
     time: "13:00",
-    venue: "그랜드 오스티엄",
-    hall: "블리스홀 (3층)",
+    venue: "그랜드 오스티엄 3F 블리스홀",
+    hall: "",
     address: "인천광역시 미추홀구 매소홀로 618 인천문학경기장",
     tel: "032-227-5000",
     mapLinks: {
